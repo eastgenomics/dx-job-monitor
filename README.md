@@ -9,7 +9,7 @@ Daily check to see if any run issues are present.
 
 ## What data are required for this app to run?
 
-A config file (txt) containing two env variable: `DNANEXUS_TOKEN` and `SLACK_TOKEN`. 
+A config file (txt) containing three env variables: `DNANEXUS_TOKEN`, `SLACK_TOKEN` and `PROM_PATH`. 
 
 To be able to run on the server, another two variables are needed `HTTP_PROXY` and `HTTPS_PROXY`
 

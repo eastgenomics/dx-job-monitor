@@ -13,6 +13,7 @@ import dxpy as dx
 import requests
 
 from helper import get_logger
+from prometheus import PromClass
 
 log = get_logger("main log")
 
@@ -191,6 +192,11 @@ def main():
         "#egg-logs",
         ":information_source: dx-job-monitoring: daily check!",
     )
+
+    # Tell Prometheus that the job has run
+    prom = PromClass("dxjobmonitor_cron")
+    prom.format_metrics
+    prom.emit_metrics
 
 
 if __name__ == "__main__":
